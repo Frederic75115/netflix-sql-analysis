@@ -60,8 +60,8 @@ This is a historical dataset, so the analysis describes the supplied records rat
 
 | File | Purpose |
 | --- | --- |
-| [creation_of_table.sql](creation_of_table.sql) | Creates the Netflix table and includes a preview query |
 | [business_questions.sql](business_questions.sql) | Lists the 15 analysis questions |
+| [creation_of_table.sql](creation_of_table.sql) | Creates the Netflix table and includes a preview query |
 | [solutions.sql](solutions.sql) | Contains the SQL solutions |
 
 ## Business Questions
