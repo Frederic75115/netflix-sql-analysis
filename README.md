@@ -19,7 +19,8 @@ I developed this project to practice translating questions into SQL queries, cle
 
 | Tool or technique | Application |
 | --- | --- |
-| PostgreSQL and pgAdmin 4 | Database setup and SQL analysis |
+| Excel | Viewing and preparing the source dataset before importing it into PostgreSQL |
+| PostgreSQL and pgAdmin 4 | Database setup, data import, and SQL analysis |
 | Common table expressions (`WITH`) | Organizing queries into readable steps |
 | `COUNT()`, `SUM()`, and `GROUP BY` | Summarizing titles by category |
 | `RANK()` with `PARTITION BY` | Finding the most common rating separately for movies and TV shows |
@@ -34,6 +35,8 @@ I developed this project to practice translating questions into SQL queries, cle
 ## Dataset
 
 The project uses the **Netflix Movies and TV Shows** dataset. Each record contains a title's identifying information and catalog metadata.
+
+I worked with the dataset in Excel and imported its records into the PostgreSQL `netflix` table using pgAdmin 4 before performing the SQL analysis.
 
 - [Kaggle dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 
@@ -111,15 +114,16 @@ Question 15 uses case-insensitive substring matching. Words such as **killer** a
 ## How to Run the Project
 
 1. Download the dataset and the repository's SQL files.
-2. Create or select a PostgreSQL database in pgAdmin 4.
-3. Run the `CREATE TABLE` statement in `creation_of_table.sql`.
-4. Import the CSV into `netflix`, using a header row and comma delimiter. Map the source CSV's `cast` field to the table's `casts` column and import missing values as SQL `NULL`.
-5. Run the preview query to inspect the imported records.
-6. Open `solutions.sql` and execute the numbered queries.
+2. If the dataset is in Excel workbook format (`.xlsx`), save the relevant worksheet as a CSV file for import.
+3. Create or select a PostgreSQL database in pgAdmin 4.
+4. Run the `CREATE TABLE` statement in `creation_of_table.sql`.
+5. Import the CSV into `netflix`, using a header row and comma delimiter. Map the source CSV's `cast` field to the table's `casts` column and import missing values as SQL `NULL`.
+6. Run the preview query to inspect the imported records.
+7. Open `solutions.sql` and execute the numbered queries.
 
 ## What I Learned
 
-This project strengthened my understanding of CTEs, window functions, text cleaning, date calculations, and aggregation. It also demonstrated why query definitions matter: surrounding spaces can split counts, integer division can distort percentages, and an unclear time window can change which records qualify.
+This project strengthened my understanding of importing spreadsheet data into PostgreSQL, CTEs, window functions, text cleaning, date calculations, and aggregation. It also demonstrated why query definitions matter: surrounding spaces can split counts, integer division can distort percentages, and an unclear time window can change which records qualify.
 
 ## Acknowledgment
 
